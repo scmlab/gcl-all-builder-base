@@ -5,11 +5,11 @@ RUN bash /tmp/install.sh && rm /tmp/install.sh
 
 USER vscode
 
-COPY install-as-vscode.sh /tmp/
+COPY --chown=vscode:vscode install-as-vscode.sh /tmp/
 RUN bash /tmp/install-as-vscode.sh && rm /tmp/install-as-vscode.sh
 # now we have ghcup and stack
 
-COPY install-ghc-and-compile-deps.sh /tmp/
+COPY --chown=vscode:vscode install-ghc-and-compile-deps.sh /tmp/
 RUN bash /tmp/install-ghc-and-compile-deps.sh && rm /tmp/install-ghc-and-compile-deps.sh
 
 CMD ["bash"]
