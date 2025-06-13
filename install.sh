@@ -1,6 +1,12 @@
 #!/bin/bash
 
-echo "==== $0 ===="; date; id; pwd; uname -a
+echo "==== $0 ===="
+date
+id
+pwd
+uname -a
+env
+
 
 # Update package list and install necessary packages
 apt-get update

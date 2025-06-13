@@ -1,12 +1,19 @@
 #!/bin/bash
 
-echo "==== $0 ===="; date; id; pwd; uname -a
+echo "==== $0 ===="
+date
+id
+pwd
+uname -a
+env
+
 
 source $HOME/.ghcup/env
 
 #
 # beware of the docker cache!
 #
+cd $HOME
 git clone https://github.com/scmlab/gcl.git
 cd gcl
 
