@@ -1,7 +1,6 @@
 #!/bin/bash
 
-echo "==== $0 ===="
-date
+echo "==== $0 ===="; date; id; pwd; uname -a
 
 source $HOME/.ghcup/env
 
