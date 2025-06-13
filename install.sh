@@ -1,5 +1,8 @@
 #!/bin/bash
 
+echo "==== $0 ===="
+date
+
 # Update package list and install necessary packages
 apt-get update
 apt-get install -y wget software-properties-common
@@ -13,6 +16,7 @@ ln -sf /usr/bin/opt-12 /usr/bin/opt
 
 
 # I don't know why I didn't need these on another machine.
+# TODO: some other packages might be needed
 # https://github.com/haskell/ghcup-www/blob/6ea0d7169a580e237d7096289f297d53bdbcf0f1/docs/install.md?plain=1#L43
 # https://github.com/haskell/ghcup-hs/issues/421
 apt-get install -y libgmp-dev libgmp10
