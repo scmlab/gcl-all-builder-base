@@ -10,14 +10,13 @@ env
 
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
 
-echo "###############000"
-cat $HOME/.bashrc | grep nvm
-echo "###############111"
-source $HOME/.bashrc
-echo "###############222"
-echo $PATH
-echo "###############333"
-which nvm
-echo "###############444"
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+if ! command -v nvm &> /dev/null; then
+    echo "ERROR: nvm load failed"
+    exit 1
+fi
+echo "nvm version: $(nvm --version)"
+
 nvm install 18
 nvm use 18
