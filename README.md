@@ -14,3 +14,10 @@ build 一個和 gcl 間接相關的 image
 
 但沒有安裝 ghc 以及 build dependencies (和 gcl 內容有關)
 
+## devcontainer
+
+這個 project 有一個 .devcontainer/devcontainer.json
+
+這個檔案不是 build 的 input
+
+只是便於在 codespaces 上測試最新 build 出的 image
