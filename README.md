@@ -21,3 +21,9 @@ build 一個和 gcl 間接相關的 image
 這個檔案不是 build 的 input
 
 只是便於在 codespaces 上測試最新 build 出的 image
+
+## 分離
+
+這個 repo 的建構過程不會用到 gcl 相關的檔案, 只有版本相關
+
+分離 repo 一個是清楚, 另一個是 github 的 Docker cache quota 會分開計算
