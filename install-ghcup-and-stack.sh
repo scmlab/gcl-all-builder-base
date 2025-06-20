@@ -21,7 +21,10 @@ source $HOME/.ghcup/env
 # 
 # ghc version for the snapshot: https://raw.githubusercontent.com/commercialhaskell/stackage-snapshots/master/lts/18/21.yaml
 time ghcup install ghc 8.10.7; ghcup set ghc 8.10.7
+ghc --version
 # hls version for the ghc: https://github.com/haskell/haskell-language-server/releases
 time ghcup install hls 2.2.0.0; ghcup set hls 2.2.0.0
+haskell-language-server-wrapper --version
 # bravely install the newest version of stack! (?!)
 ghcup install stack
+stack --version
