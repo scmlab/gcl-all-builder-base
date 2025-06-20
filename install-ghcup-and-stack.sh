@@ -14,4 +14,14 @@ echo '[ -f "$HOME/.ghcup/env" ] && . "$HOME/.ghcup/env" # ghcup-env' >> ~/.bashr
 echo '[ -f "$HOME/.ghcup/env" ] && . "$HOME/.ghcup/env" # ghcup-env' >> ~/.zshrc
 
 source $HOME/.ghcup/env
+
+# Originally planned to install only ghcup and stack, with stack managing GHC per project.
+# But since HLS cannot be installed via stack, we switched to using ghcup for both GHC and HLS.
+# This requires setting system-ghc: true in the project's stack.yaml
+# 
+# ghc version for the snapshot: https://raw.githubusercontent.com/commercialhaskell/stackage-snapshots/master/lts/18/21.yaml
+time ghcup install ghc 8.10.7; ghcup set ghc 8.10.7
+# hls version for the ghc: https://github.com/haskell/haskell-language-server/releases
+time ghcup install hls 2.2.0.0; ghcup set hls 2.2.0.0
+# bravely install the newest version of stack! (?!)
 ghcup install stack
