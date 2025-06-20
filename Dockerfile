@@ -13,7 +13,4 @@ COPY --chown=vscode:vscode install-nvm-and-node.sh /tmp/
 RUN bash -x /tmp/install-nvm-and-node.sh && rm /tmp/install-nvm-and-node.sh
 # now we have nvm and node
 
-#COPY --chown=vscode:vscode install-ghc-and-compile-deps.sh /tmp/
-#RUN bash -x /tmp/install-ghc-and-compile-deps.sh && rm /tmp/install-ghc-and-compile-deps.sh
-
 CMD ["bash"]
