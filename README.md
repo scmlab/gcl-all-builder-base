@@ -12,7 +12,11 @@ build 一個和 gcl 間接相關的 image
 
 這個 repo 安裝了 stack (和 gcl 內容版本幾乎無關)
 
-但沒有安裝 ghc 以及 build dependencies (和 gcl 內容有關)
+~~但沒有安裝 ghc 以及 build dependencies (和 gcl 內容有關)~~
+
+為了兼顧 CI 與 HLS 使用者的需求, 所以改用 ghcup 安裝 ghc 以及 HLS
+
+(不能由 stack 安裝 HLS [(link)](https://github.com/haskell/haskell-language-server/pull/3314))
 
 
 ## 分離
