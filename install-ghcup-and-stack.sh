@@ -28,3 +28,6 @@ haskell-language-server-wrapper --version
 # bravely install the newest version of stack! (?!)
 ghcup install stack
 stack --version
+# Configure stack to use the system GHC and not install GHC automatically.
+stack config set system-ghc --global true
+stack config set install-ghc --global false
