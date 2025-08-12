@@ -14,5 +14,5 @@ export NVM_DIR="$HOME/.nvm"
 source "$NVM_DIR/nvm.sh"
 echo "nvm version: $(nvm --version)"
 
-nvm install 18
-nvm use 18
+nvm install 24
+nvm use 24
