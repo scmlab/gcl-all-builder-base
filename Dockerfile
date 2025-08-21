@@ -1,7 +1,7 @@
-FROM mcr.microsoft.com/devcontainers/base:ubuntu-22.04
+FROM mcr.microsoft.com/devcontainers/base:ubuntu-24.04
 COPY install-os-packages.sh /tmp/
 RUN bash -x /tmp/install-os-packages.sh && rm /tmp/install-os-packages.sh
-# now we have llvm12 and libs
+# now we have llvm and libs
 
 USER vscode
 
