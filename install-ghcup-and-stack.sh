@@ -22,12 +22,15 @@ source $HOME/.ghcup/env
 # ghc version for the snapshot: https://raw.githubusercontent.com/commercialhaskell/stackage-snapshots/master/lts/18/21.yaml
 time ghcup install ghc 9.8.4; ghcup set ghc 9.8.4
 ghc --version
+
 # hls version for the ghc: https://github.com/haskell/haskell-language-server/releases
 time ghcup install hls 2.11.0.0; ghcup set hls 2.11.0.0
 haskell-language-server-wrapper --version
-# bravely install the newest version of stack! (?!)
-ghcup install stack
+
+# lock stack to 3.5.1 with hpack-0.38.0
+time ghcup install stack 3.5.1
 stack --version
+
 # Configure stack to use the system GHC and not install GHC automatically.
 stack config set system-ghc --global true
 stack config set install-ghc --global false
